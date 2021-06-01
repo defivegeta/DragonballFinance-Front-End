@@ -310,7 +310,7 @@ export const useTotalValue = (): BigNumber => {
 // Prices3
 
 export const usePrice3BnbBusd = (): BigNumber => {
-  const pid = 7 // BUSD-BNB LP
+  const pid = 9 // BUSD-BNB LP
   const farm = useFarm3FromPid(pid)
   return farm?.tokenPriceVsQuote ? new BigNumber(farm?.tokenPriceVsQuote) : ZERO
 }
@@ -320,7 +320,7 @@ export const usePrice3CakeBusd = (): BigNumber => {
   // const bnbPriceUSD = usePriceBnbBusd()
   // const farm = useFarmFromPid(pid)
   // return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
-  const pid = 0; // EGG-BUSD LP
+  const pid = 1; // EGG-BUSD LP
   const farm = useFarm3FromPid(pid);
   return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO;
 }
