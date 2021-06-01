@@ -35,12 +35,12 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.wbnb,
   },
   {
-    pid: 41,
+    pid: 29,
     risk: 5,
     lpSymbol: 'DBALL-SENZU LP',
     lpAddresses: {
       97: '',
-      56: '0x1134d78dd9d900d99cfa561aeb2a46942533053c',
+      56: '0x7CA6751Ae5CB4676ace4c2AA0D039778642e2702',
     },
     tokenSymbol: 'DBALL',
     tokenAddresses: {
@@ -55,7 +55,7 @@ const farms: FarmConfig[] = [
     risk: 5,
     lpSymbol: 'DBALL-USDT LP',
     lpAddresses: {
-      97: '',
+     97: '',
       56: '0x4a228A09B2ED4B9995b05F87bE60E7D4dCCf28C4',
     },
     tokenSymbol: 'DBALL',
@@ -65,7 +65,7 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.USDT,
     quoteTokenAdresses: contracts.usdt,
-  },
+   },
   {
     pid: 31,
     risk: 5,
