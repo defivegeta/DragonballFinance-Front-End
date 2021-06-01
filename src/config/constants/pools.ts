@@ -521,7 +521,7 @@ const pools: PoolConfig[] = [
     projectLink: 'https://binance.com/',
     harvest: true,
     tokenPerBlock: '0.00003651736111',
-    sortOrder: 19,
+    sortOrder: 1,
     isFinished: false,
     tokenDecimals: 18,
     burnFee: 30,
