@@ -39,7 +39,7 @@ const config: MenuEntry[] = [
     href: '/pools',
   },
   {
-    label: 'Layer 1',
+    label: 'Layered Farming',
     icon: 'LayerIcon',
     href: '/layer/info',
   },
@@ -132,14 +132,18 @@ const config: MenuEntry[] = [
     href: 'https://dragonballfinance.org/Roadmap',
   },
   {
-    label: 'DBALL Audit',
+    label: 'Audits',
     icon: 'AuditIcon',
-    href: 'https://dragonballfinance.org/Dball.pdf',
-  },
-  {
-    label: 'SENZU Audit',
-    icon: 'AuditIcon',
-    href: 'https://dragonballfinance.org/Senzu.pdf',
+    items: [
+      {
+        label: 'DBALL Audit',
+        href: 'https://dragonballfinance.org/Dball.pdf',
+      },
+      {
+        label: 'SENZU Audit',
+        href: 'https://dragonballfinance.org/Senzu.pdf',
+      },
+    ],
   },
 ]
 

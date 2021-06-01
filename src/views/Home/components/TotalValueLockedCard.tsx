@@ -45,7 +45,7 @@ const TotalValueLockedCard = () => {
           </Row>
             
           <Row>
-            <Text fontSize="20px" color="textSubtle">Across Layer 1</Text>
+            <Text fontSize="20px" color="textSubtle">Across Layers</Text>
             <CardValue fontSize="20px" value={totalValue3.toNumber()} prefix="$" decimals={2}/>
           </Row>
           
@@ -59,7 +59,7 @@ const TotalValueLockedCard = () => {
           {/* <Heading size="xl"> */}
             <CardValue value={totalValueAll.toNumber()} prefix="$" decimals={2}/>
           {/* </Heading> */}
-          <Text color="textSubtle">Across All  Farms,  Pools,  Layer 1</Text>
+          <Text color="textSubtle">Across All  Farms,  Pools,  Layers</Text>
         </>
       </CardBody>
     </StyledTotalValueLockedCard>
