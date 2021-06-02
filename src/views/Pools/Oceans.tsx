@@ -59,7 +59,7 @@ const Farm: React.FC = () => {
       rewardTokenFarm?.quoteTokenSymbol,
     )
     const totalRewardPricePerYear = rewardTokenPriceInBNB.times(pool.tokenPerBlock).times(BLOCKS_PER_YEAR)
-    let totalStakingTokenInPool = new BigNumber(0)
+    let totalStakingTokenInPool = new BigNumber(1)
     totalStakingTokenInPool = stakingTokenPriceInBNB.times(getBalanceNumber(pool.totalStaked))
 
     // tokens per block * price of CAKE * blocks_per_year / ( tokens in pool x salt price) * 100

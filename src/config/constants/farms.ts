@@ -523,7 +523,7 @@ const farms: FarmConfig[] = [
     tokenSymbol: 'SENZU',
     tokenAddresses: {
       97: '',
-      56: '0xd89745a21c3eb87cfbc0c0e6eb6a30974cadbd90',
+      56: '0xcba1813ede683333020cedea7c3b63fbac28e78e',
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
@@ -667,7 +667,7 @@ const farms: FarmConfig[] = [
     tokenSymbol: 'SENZU',
     tokenAddresses: {
       97: '',
-      56: '0xd89745a21c3eb87cfbc0c0e6eb6a30974cadbd90',
+      56: '0xcba1813ede683333020cedea7c3b63fbac28e78e',
     },
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
