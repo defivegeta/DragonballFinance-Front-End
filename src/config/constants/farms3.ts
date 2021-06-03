@@ -31,7 +31,7 @@ const farms3: Farm3Config[] = [
     tokenSymbol: 'SL1',
     tokenAddresses: {
       97: '',
-      56: '0x2170ed0880ac9a755fd29b2688956bd959f933f8',
+      56: '0xd89745a21c3eb87cfbc0c0e6eb6a30974cadbd90',
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
@@ -47,7 +47,7 @@ const farms3: Farm3Config[] = [
     tokenSymbol: 'SL1',
     tokenAddresses: {
       97: '',
-      56: '0x2170ed0880ac9a755fd29b2688956bd959f933f8',
+      56: '0xd89745a21c3eb87cfbc0c0e6eb6a30974cadbd90',
     },
     quoteTokenSymbol: QuoteToken.DBALL,
     quoteTokenAdresses: contracts.busd,
@@ -63,7 +63,7 @@ const farms3: Farm3Config[] = [
     tokenSymbol: 'SL1',
     tokenAddresses: {
       97: '',
-      56: '0x2170ed0880ac9a755fd29b2688956bd959f933f8',
+      56: '0xd89745a21c3eb87cfbc0c0e6eb6a30974cadbd90',
     },
     quoteTokenSymbol: QuoteToken.SENZU,
     quoteTokenAdresses: contracts.senzu,
@@ -82,7 +82,7 @@ const farms3: Farm3Config[] = [
     tokenSymbol: 'SENZU',
     tokenAddresses: {
       97: '',
-      56: '0xd89745a21c3eb87cfbc0c0e6eb6a30974cadbd90',
+      56: '0xcba1813ede683333020cedea7c3b63fbac28e78e',
     },
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
@@ -98,7 +98,7 @@ const farms3: Farm3Config[] = [
     tokenSymbol: 'SENZU',
     tokenAddresses: {
       97: '',
-      56: '0xd89745a21c3eb87cfbc0c0e6eb6a30974cadbd90',
+      56: '0xcba1813ede683333020cedea7c3b63fbac28e78e',
     },
     quoteTokenSymbol: QuoteToken.DBALL,
     quoteTokenAdresses: contracts.busd,
@@ -114,7 +114,7 @@ const farms3: Farm3Config[] = [
     tokenSymbol: 'SENZU',
     tokenAddresses: {
       97: '',
-      56: '0xd89745a21c3eb87cfbc0c0e6eb6a30974cadbd90',
+      56: '0xcba1813ede683333020cedea7c3b63fbac28e78e',
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,

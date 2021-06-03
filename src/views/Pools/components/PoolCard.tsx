@@ -55,6 +55,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
     burnFee,
   } = pool
 
+  console.log("burnFee",burnFee)
   // Pools using native BNB behave differently than pools using a token
   const isBnbPool = poolCategory === PoolCategory.BINANCE
   const TranslateString = useI18n()
@@ -87,7 +88,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
       max={stakingLimit && stakingTokenBalance.isGreaterThan(convertedLimit) ? convertedLimit : stakingTokenBalance}
       onConfirm={onStake}
       tokenName={stakingLimit ? `${stakingTokenName} (${stakingLimit} max)` : stakingTokenName}
-      depositFeeBP={burnFee * 10}
+      burnFeeBP={burnFee * 10}
     />,
   )
 
@@ -117,7 +118,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         </CardTitle>
         <div style={{ marginBottom: '8px', display: 'flex', alignItems: 'center' }}>
           <div style={{ flex: 1 }}>
-            <Image src="/images/bnbpool/BNB.svg" width={64} height={64} alt={tokenName} />
+            <Image src={`/images/bnbpool/${tokenName}.png`} width={64} height={64} alt={tokenName} />
           </div>
           {account && harvest && !isOldSyrup && (
             <HarvestButton
