@@ -8,11 +8,11 @@ export default {
     97: '',
   },
   cake3: {
-    56: '0xd89745a21c3eb87cfbc0c0e6eb6a30974cadbd90',
+    56: '0xcBA1813Ede683333020cedea7C3b63FbaC28e78e',
     97: '',
   },
   masterChef3: {
-    56: '0xaC6DD1cf504A273583DEBd38e139736B210E3158',
+    56: '0x48F4eC8AD1cb16fB45f75733BFF41b4BE7f49B00',
     97: '',
   },
   wbnb: {
@@ -44,7 +44,7 @@ export default {
     97: '',
   },
   senzu: {
-    56: '0xcBA1813Ede683333020cedea7C3b63FbaC28e78e',
+    56: '0xcba1813ede683333020cedea7c3b63fbac28e78e',
     97: '',
   },
   btcb: {
