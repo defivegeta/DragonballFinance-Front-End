@@ -8,7 +8,7 @@ import { Image, Heading } from '@pancakeswap-libs/uikit'
 import { BLOCKS_PER_YEAR, CAKE_PER_BLOCK, CAKE_POOL_PID } from 'config'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
-import { useFarms, usePriceBnbBusd, usePriceCakeBusd, usePrice3CakeBusd, usePriceCake2Busd, usePriceEthBusd, usePriceBTCBBusd } from 'state/hooks'
+import { useFarms, usePriceBnbBusd, usePriceCakeBusd, usePriceSenzuBusd, usePriceCake2Busd, usePriceEthBusd, usePriceBTCBBusd } from 'state/hooks'
 import useRefresh from 'hooks/useRefresh'
 import { fetchFarmUserDataAsync } from 'state/actions'
 import { QuoteToken } from 'config/constants/types'
@@ -26,7 +26,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   const TranslateString = useI18n()
   const farmsLP = useFarms()
   const cakePrice = usePriceCakeBusd()
-  const senzuPrice = usePrice3CakeBusd()
+  const senzuPrice = usePriceSenzuBusd()
   const bnbPrice = usePriceBnbBusd()
   const cake2Price = usePriceCake2Busd()
   const ethPrice = usePriceEthBusd()

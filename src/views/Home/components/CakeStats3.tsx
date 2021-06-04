@@ -32,9 +32,9 @@ const CakeStats3 = () => {
   const cakeSupply = getBalanceNumber(circSupply);
   const marketCap = eggPrice.times(circSupply);
 
-  let senzuPerBlock = 0;
-  if(farms && farms[0] && farms[0].senzuPerBlock){
-    senzuPerBlock = new BigNumber(farms[0].senzuPerBlock).div(new BigNumber(10).pow(18)).toNumber();
+  let DragonBallPerBlock = 0;
+  if(farms && farms[0] && farms[0].DragonBallPerBlock){
+    DragonBallPerBlock = new BigNumber(farms[0].DragonBallPerBlock).div(new BigNumber(10).pow(18)).toNumber();
   }
 
   return (
@@ -61,7 +61,7 @@ const CakeStats3 = () => {
         </Row>
         <Row>
           <Text fontSize="14px">{TranslateString(5400, 'New SL1/block')}</Text>
-          <Text bold fontSize="14px">{senzuPerBlock}</Text>
+          <Text bold fontSize="14px">{DragonBallPerBlock}</Text>
         </Row>
       </CardBody>
     </StyledCakeStats>
