@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { provider } from 'web3-core'
 import CardNav from 'components/CardNav'
-import { Image, Heading, Text } from '@pancakeswap-libs/uikit'
+import { Image, Heading, Text } from 'dragonball-uikit'
 import { BLOCKS_PER_YEAR } from 'config'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
@@ -133,11 +133,11 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
       <Hero>
         <div>
         <Heading as="h1" size="xxl" mb="16px">
-          Layer 1
+          Layered Farming
         </Heading>
         <ul>
           <li>{TranslateString(58000, 'Layered Farming is highly volatile')}</li>
-          <li>{TranslateString(40400, 'please do your own research before investing')}</li>
+          <li>{TranslateString(40400, 'Please do your own research before investing')}</li>
         </ul>
         </div>
       </Hero>
@@ -145,8 +145,8 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
       <Divider />
       <Heading as="h2" size="lg" color="primary" mb="50px" style={{ textAlign: 'center' }}>
         {tokenMode
-          ? TranslateString(100020, 'Stake tokens to earn SENZU')
-          : TranslateString(32000, 'Stake LP tokens to earn SENZU')}
+          ? TranslateString(100020, 'Stake tokens to earn SL1')
+          : TranslateString(32000, 'Stake LP tokens to earn SL1')}
       </Heading>
       <Heading as="h3" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
         {TranslateString(100000, 'Deposit Fee will be used to buyback DBALL')}
@@ -163,7 +163,6 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           </Route>
         </FlexLayout>
       </div>
-      <Image src="/images/egg/12.png" alt="illustration" width={1352} height={587} responsive />
     </Page>
   )
 }

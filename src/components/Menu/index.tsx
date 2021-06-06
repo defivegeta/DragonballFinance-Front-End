@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
+import { Menu as UikitMenu } from 'dragonball-uikit'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { allLanguages } from 'config/localisation/languageCodes'
 import { LanguageContext } from 'contexts/Localisation/languageContext'
 import useTheme from 'hooks/useTheme'
-import { usePriceCakeBusd, usePrice3CakeBusd } from 'state/hooks'
-import { Menu as UikitMenu } from '@pancakeswap-libs/uikit'
+import { usePriceCakeBusd, usePriceCake2Busd } from 'state/hooks'
 import config from './config'
 
 const Menu = (props) => {
@@ -12,7 +12,7 @@ const Menu = (props) => {
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   const { isDark, toggleTheme } = useTheme()
   const cakePriceUsd = usePriceCakeBusd()
-  const cakePrice2Usd = usePrice3CakeBusd()
+  const cakePrice2Usd = usePriceCake2Busd()
 
   return (
     <UikitMenu

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useModal, Text } from '@pancakeswap-libs/uikit'
+import { useModal, Text } from 'dragonball-uikit'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
 import { Contract } from 'web3-eth-contract'

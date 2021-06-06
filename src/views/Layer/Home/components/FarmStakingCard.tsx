@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react'
 import styled from 'styled-components'
-import { Heading, Card, CardBody, Button } from '@pancakeswap-libs/uikit'
+import { Heading, Card, CardBody, Button } from 'dragonball-uikit'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useI18n from 'hooks/useI18n'
 import BigNumber from 'bignumber.js/bignumber'
@@ -72,12 +72,12 @@ const FarmedStakingCard = () => {
         </Heading>
         <CardImage src="/images/egg/2.png" alt="cake logo" width={64} height={64} />
         <Block>
-          <Label>{TranslateString(5440, 'SENZU to Harvest')}</Label>
+          <Label>{TranslateString(5440, 'SL1 to Harvest')}</Label>
           <CakeHarvestBalance earningsSum={earningsSum}/>
           <Label>~${(eggPrice * earningsSum).toFixed(2)}</Label>
         </Block>
         <Block>
-          <Label>{TranslateString(5460, 'SENZU in Wallet')}</Label>
+          <Label>{TranslateString(5460, 'SL1 in Wallet')}</Label>
           <CakeWalletBalance cakeBalance={cakeBalance} />
           <Label>~${(eggPrice * cakeBalance).toFixed(2)}</Label>
         </Block>
@@ -90,7 +90,7 @@ const FarmedStakingCard = () => {
               fullWidth
             >
               {pendingTx
-                ? TranslateString(5480, 'Collecting SENZU')
+                ? TranslateString(5480, 'Collecting SL1')
                 : TranslateString(9990, `Harvest all (${balancesWithValue.length})`)}
             </Button>
           ) : (

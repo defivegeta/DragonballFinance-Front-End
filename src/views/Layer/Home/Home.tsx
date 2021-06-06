@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, BaseLayout } from '@pancakeswap-libs/uikit'
+import { Heading, BaseLayout } from 'dragonball-uikit'
 import CardNav from 'components/CardNav'
 import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
@@ -76,11 +76,11 @@ const Home: React.FC = () => {
       <Hero>
         <div>
           <Heading as="h1" size="xxl" mb="16px">
-            Layer 1
+            Layered Farming
           </Heading>
           <ul>
             <li>{TranslateString(5800, 'Layered Farming is highly volatile')}</li>
-            <li>{TranslateString(4040, 'please do your own research before investing')}</li>
+            <li>{TranslateString(4040, 'Please do your own research before investing')}</li>
           </ul>
         </div>
       </Hero>

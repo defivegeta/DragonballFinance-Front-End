@@ -2,7 +2,75 @@ import contracts from './contracts'
 import { Farm3Config, QuoteToken } from './types'
 
 const farms3: Farm3Config[] = [
+  // SENZU LAYER
+  
+  {
+    pid: 0,
+    risk: 2,
+    lpSymbol: 'SL1-BNB (NEW)',
+    lpAddresses: {
+      97: '',
+      56: '0x82Cead752C68F4E99Fb9Be9Bb0c48c17b4057FCB',
+    },
+    tokenSymbol: 'SL1',
+    tokenAddresses: {
+      97: '',
+      56: '0xd89745a21c3eb87cfbc0c0e6eb6a30974cadbd90',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 1,
+    risk: 2,
+    lpSymbol: 'SL1-BUSD (NEW)',
+    lpAddresses: {
+      97: '',
+      56: '0x5455eE889414c9FF8B8A8C4BE7cB8eb60cAC48cD',
+    },
+    tokenSymbol: 'SL1',
+    tokenAddresses: {
+      97: '',
+      56: '0xd89745a21c3eb87cfbc0c0e6eb6a30974cadbd90',
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+  },
+  {
+    pid: 2,
+    risk: 2,
+    lpSymbol: 'SL1-DBALL (NEW)',
+    lpAddresses: {
+      97: '',
+      56: '0xF4BbDaB2A538AdE9B0Af2F0a6edfd419DfF848DC',
+    },
+    tokenSymbol: 'SL1',
+    tokenAddresses: {
+      97: '',
+      56: '0xd89745a21c3eb87cfbc0c0e6eb6a30974cadbd90',
+    },
+    quoteTokenSymbol: QuoteToken.DBALL,
+    quoteTokenAdresses: contracts.busd,
+  },
+  {
+    pid: 3,
+    risk: 2,
+    lpSymbol: 'SL1-SENZU (NEW)',
+    lpAddresses: {
+      97: '',
+      56: '0x373c0C0305F575d57502E71079a8F09B88Ac66ed',
+    },
+    tokenSymbol: 'SL1',
+    tokenAddresses: {
+      97: '',
+      56: '0xd89745a21c3eb87cfbc0c0e6eb6a30974cadbd90',
+    },
+    quoteTokenSymbol: QuoteToken.SENZU,
+    quoteTokenAdresses: contracts.senzu,
+  },
+  
   // NATIVES
+
   {
     pid: 16,
     risk: 5,
@@ -14,7 +82,7 @@ const farms3: Farm3Config[] = [
     tokenSymbol: 'SENZU',
     tokenAddresses: {
       97: '',
-      56: '0xd89745a21c3eb87cfbc0c0e6eb6a30974cadbd90',
+      56: '0xcba1813ede683333020cedea7c3b63fbac28e78e',
     },
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
@@ -30,7 +98,7 @@ const farms3: Farm3Config[] = [
     tokenSymbol: 'SENZU',
     tokenAddresses: {
       97: '',
-      56: '0xd89745a21c3eb87cfbc0c0e6eb6a30974cadbd90',
+      56: '0xcba1813ede683333020cedea7c3b63fbac28e78e',
     },
     quoteTokenSymbol: QuoteToken.DBALL,
     quoteTokenAdresses: contracts.busd,
@@ -46,7 +114,7 @@ const farms3: Farm3Config[] = [
     tokenSymbol: 'SENZU',
     tokenAddresses: {
       97: '',
-      56: '0xd89745a21c3eb87cfbc0c0e6eb6a30974cadbd90',
+      56: '0xcba1813ede683333020cedea7c3b63fbac28e78e',
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
@@ -102,7 +170,7 @@ const farms3: Farm3Config[] = [
   {
     pid: 10,
     risk: 5,
-    lpSymbol: 'DBALL-USD (NEW)',
+    lpSymbol: 'DBALL-USDT (NEW)',
     lpAddresses: {
       97: '',
       56: '0x9a465fEc82D4c11aa948B80d26dC00B04c0E030C',
@@ -184,6 +252,24 @@ const farms3: Farm3Config[] = [
   },
   
   // POOLS
+
+  {
+    pid: 17,
+    risk: 5,
+    isTokenOnly: true,
+    lpSymbol: 'SL1',
+    lpAddresses: {
+      97: '',
+      56: '0xaC6DD1cf504A273583DEBd38e139736B210E3158', // VIKING-BUSD LP
+    },
+    tokenSymbol: 'SL1',
+    tokenAddresses: {
+      97: '',
+      56: '0xd89745A21C3EB87CfbC0C0e6EB6a30974cAdbD90',
+    },
+    quoteTokenSymbol: QuoteToken.SL1,
+    quoteTokenAdresses: contracts.sl1,
+  },
   {
     pid: 20,
     risk: 5,
@@ -234,89 +320,6 @@ const farms3: Farm3Config[] = [
     },
     quoteTokenSymbol: QuoteToken.CAKE,
     quoteTokenAdresses: contracts.cake,
-  },
-  {
-    pid: 17,
-    risk: 5,
-    isTokenOnly: true,
-    lpSymbol: 'SL1',
-    lpAddresses: {
-      97: '',
-      56: '0xaC6DD1cf504A273583DEBd38e139736B210E3158', // VIKING-BUSD LP
-    },
-    tokenSymbol: 'SL1',
-    tokenAddresses: {
-      97: '',
-      56: '0xd89745A21C3EB87CfbC0C0e6EB6a30974cAdbD90',
-    },
-    quoteTokenSymbol: QuoteToken.SL1,
-    quoteTokenAdresses: contracts.sl1,
-  },
-  // SENZU LAYER
-  
-  {
-    pid: 0,
-    risk: 2,
-    lpSymbol: 'SL1-BNB (NEW)',
-    lpAddresses: {
-      97: '',
-      56: '0x82Cead752C68F4E99Fb9Be9Bb0c48c17b4057FCB',
-    },
-    tokenSymbol: 'SL1',
-    tokenAddresses: {
-      97: '',
-      56: '0xd89745a21c3eb87cfbc0c0e6eb6a30974cadbd90',
-    },
-    quoteTokenSymbol: QuoteToken.BNB,
-    quoteTokenAdresses: contracts.wbnb,
-  },
-  {
-    pid: 1,
-    risk: 2,
-    lpSymbol: 'SL1-BUSD (NEW)',
-    lpAddresses: {
-      97: '',
-      56: '0x5455eE889414c9FF8B8A8C4BE7cB8eb60cAC48cD',
-    },
-    tokenSymbol: 'SL1',
-    tokenAddresses: {
-      97: '',
-      56: '0x2170ed0880ac9a755fd29b2688956bd959f933f8',
-    },
-    quoteTokenSymbol: QuoteToken.BUSD,
-    quoteTokenAdresses: contracts.busd,
-  },
-  {
-    pid: 2,
-    risk: 2,
-    lpSymbol: 'SL1-DBALL (NEW)',
-    lpAddresses: {
-      97: '',
-      56: '0xF4BbDaB2A538AdE9B0Af2F0a6edfd419DfF848DC',
-    },
-    tokenSymbol: 'SL1',
-    tokenAddresses: {
-      97: '',
-      56: '0x2170ed0880ac9a755fd29b2688956bd959f933f8',
-    },
-    quoteTokenSymbol: QuoteToken.DBALL,
-    quoteTokenAdresses: contracts.busd,
-  },
-  {
-    pid: 3,
-    risk: 2,
-    lpSymbol: 'SL1-SENZU (NEW)',
-    lpAddresses: {
-      97: '',
-      56: '0x373c0C0305F575d57502E71079a8F09B88Ac66ed',
-    },
-    tokenSymbol: 'SL1',
-    tokenAddresses: {
-      97: '',
-      56: '0x2170ed0880ac9a755fd29b2688956bd959f933f8',
-    },
-    quoteTokenSymbol: QuoteToken.SENZU,
-    quoteTokenAdresses: contracts.senzu,
   },
   
   // OLD-ONES

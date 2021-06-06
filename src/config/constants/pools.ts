@@ -526,6 +526,56 @@ const pools: PoolConfig[] = [
     tokenDecimals: 18,
     burnFee: 30,
   },
+  {
+    sousId: 21,
+    tokenName: 'CAKE',
+    stakingTokenName: QuoteToken.DBALL,
+    stakingTokenAddress: {
+      97: '0x85582d24455caaf44fc4f914bdca2a6cb73e6681',
+      56: '0xceB2f5e9C7F2D3BCd12A7560D73c56f3396af3F9', // CAKE
+    },
+    contractAddress: {
+      97: '0x9FcA113B2D4E64462229E107A8F4Aa7359D055F5',
+      56: '0xBa7D3031425B824464548b182374457949c5A6ac', // SmartChef
+    },
+    rewardTokenAddress: {
+      97: '0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee', // BUSD, didnt find CAKE
+      56: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', // CAKE
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'https://pancakeswap.finance/',
+    harvest: true,
+    tokenPerBlock: '0.0004375',
+    sortOrder: 20,
+    isFinished: false,
+    tokenDecimals: 18,
+    burnFee: 30,
+  },
+  {
+    sousId: 22,
+    tokenName: 'SENZU',
+    stakingTokenName: QuoteToken.DBALL,
+    stakingTokenAddress: {
+      97: '0x85582d24455caaf44fc4f914bdca2a6cb73e6681',
+      56: '0xceB2f5e9C7F2D3BCd12A7560D73c56f3396af3F9', // DBALL
+    },
+    contractAddress: {
+      97: '',
+      56: '0xB7Fd669b7FeB52086513c99E5598728814eF1aa0', // SmartChef
+    },
+    rewardTokenAddress: {
+      97: '0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee', // BUSD, didnt find CAKE
+      56: '0xcba1813ede683333020cedea7c3b63fbac28e78e', // SENZU
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'https://dragonballfinance.org/',
+    harvest: true,
+    tokenPerBlock: '0.00003651736111',
+    sortOrder: 21,
+    isFinished: false,
+    tokenDecimals: 18,
+    burnFee: 30,
+  },
 ]
 
 export default pools

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Image, Button } from '@pancakeswap-libs/uikit'
+import { Image, Button } from 'dragonball-uikit'
 import { CommunityTag } from 'components/Tags'
 import useI18n from 'hooks/useI18n'
 import CardTitle from './CardTitle'
@@ -39,7 +39,7 @@ const Coming: React.FC = () => {
   return (
     <Card>
       <div style={{ padding: '24px' }}>
-        <CardTitle>{TranslateString(414, 'Your Dball Project')}</CardTitle>
+        <CardTitle>{TranslateString(414, 'Your Project')}</CardTitle>
         <Image src="/images/egg/2.png" width={64} height={64} alt="Your project" />
         <Balance>0.0</Balance>
         <Label>{TranslateString(416, 'Create a pool for your token')}</Label>

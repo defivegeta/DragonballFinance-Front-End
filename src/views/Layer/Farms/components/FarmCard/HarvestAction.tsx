@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import BigNumber from 'bignumber.js'
-import { Button, Flex, Heading } from '@pancakeswap-libs/uikit'
+import { Button, Flex, Heading } from 'dragonball-uikit'
 import useI18n from 'hooks/useI18n'
 import { useHarvest3 } from 'hooks/useHarvest'
 import { getBalanceNumber } from 'utils/formatBalance'
@@ -32,7 +32,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
     <Flex mb='8px' justifyContent='space-between' alignItems='center'>
       <Heading color={rawEarningsBalance === 0 ? 'textDisabled' : 'text'}>{displayBalance}</Heading>
       <BalanceAndCompound>
-        {pid === 11 ?
+        {pid === 20 ?
           <Button
             disabled={rawEarningsBalance === 0 || pendingTx}
             size='sm'
