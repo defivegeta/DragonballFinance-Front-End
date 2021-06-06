@@ -37,6 +37,7 @@
     "@types/styled-components": "^5.1.7",
     "bignumber.js": "^9.0.0",
     "chart.js": "^2.9.4",
+    "core-js": "^3.3",
     "iframe-resizer-react": "^1.1.0",
     "lodash": "^4.17.20",
     "mountaindefi-uikit": "0.10.6",
