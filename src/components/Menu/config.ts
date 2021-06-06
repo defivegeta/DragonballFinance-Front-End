@@ -39,7 +39,7 @@ const config: MenuEntry[] = [
     href: '/pools',
   },
   {
-    label: 'Cylinder Layer Farm',
+    label: 'Cyclical Layered Farming',
     icon: 'LayerIcon',
     href: '/layer/info',
   },
