@@ -1,5 +1,5 @@
 {
-  "name": "goose-frontend",
+  "name": "dragonballfinance-frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -24,6 +24,7 @@
     ]
   },
   "dependencies": {
+    "yarn": "^1.22.10",
     "@binance-chain/bsc-use-wallet": "^0.8.1",
     "@crowdin/crowdin-api-client": "^1.10.1",
     "@ethersproject/abi": "^5.0.7",
