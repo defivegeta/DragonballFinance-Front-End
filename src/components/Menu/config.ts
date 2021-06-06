@@ -1,4 +1,4 @@
-import { MenuEntry } from '@pancakeswap-libs/uikit'
+import { MenuEntry } from 'dragonball-uikit'
 
 const config: MenuEntry[] = [
   {
@@ -39,7 +39,7 @@ const config: MenuEntry[] = [
     href: '/pools',
   },
   {
-    label: 'Layered Farming',
+    label: 'Cylinder Layer Farm',
     icon: 'LayerIcon',
     href: '/layer/info',
   },
@@ -53,21 +53,21 @@ const config: MenuEntry[] = [
   //   icon: 'IfoIcon',
   //   href: '/ifo',
   // },
-  /* {
-    label: 'Nft',
-    icon: 'NftIcon',
-    href: '/Nft',
-  },
-  {
-    label: 'Lottery',
-    icon: 'TicketIcon',
-    href: '/Lottery',
-  },
-  {
-    label: 'Gaming App',
-    icon: 'NftIcon',
-    href: '/Gaming',
-  }, */
+  // {
+  //   label: 'Nft',
+  //   icon: 'NftIcon',
+  //   href: '/Nft',
+  // },
+  // {
+  //   label: 'Lottery',
+  //   icon: 'TicketIcon',
+  //   href: '/Lottery',
+  // },
+  // {
+  //   label: 'Gaming App',
+  //   icon: 'NftIcon',
+  //   href: '/Gaming',
+  // },
   {
     label: 'DBALL Info',
     icon: 'InfoIcon',
@@ -132,19 +132,16 @@ const config: MenuEntry[] = [
     href: 'https://dragonballfinance.org/Roadmap',
   },
   {
-    label: 'Audits',
+    label: 'DBALL Audit',
     icon: 'AuditIcon',
-    items: [
-      {
-        label: 'DBALL Audit',
-        href: 'https://dragonballfinance.org/Dball.pdf',
-      },
-      {
-        label: 'SENZU Audit',
-        href: 'https://dragonballfinance.org/Senzu.pdf',
-      },
-    ],
+    href: 'https://dragonballfinance.org/Dball.pdf',
+  },
+  {
+    label: 'SENZU Audit',
+    icon: 'AuditIcon',
+    href: 'https://dragonballfinance.org/Senzu.pdf',
   },
 ]
 
 export default config
+

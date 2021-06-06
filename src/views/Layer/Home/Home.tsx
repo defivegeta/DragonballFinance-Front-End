@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, BaseLayout } from '@pancakeswap-libs/uikit'
+import { Heading, BaseLayout } from 'dragonball-uikit'
 import CardNav from 'components/CardNav'
 import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'

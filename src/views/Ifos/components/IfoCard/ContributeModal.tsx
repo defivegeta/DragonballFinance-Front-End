@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
-import { Modal, Button, Flex, LinkExternal } from '@pancakeswap-libs/uikit'
+import { Modal, Button, Flex, LinkExternal } from 'dragonball-uikit'
 import BalanceInput from 'components/Input/BalanceInput'
 import { getFullDisplayBalance } from 'utils/formatBalance'
 import useWeb3 from 'hooks/useWeb3'
