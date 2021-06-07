@@ -561,7 +561,7 @@ const pools: PoolConfig[] = [
     },
     contractAddress: {
       97: '',
-      56: '0xB7Fd669b7FeB52086513c99E5598728814eF1aa0', // SmartChef
+      56: '0xe7d00DC41c1174B79ee07e18e4b81eC8010FD2Ec', // SmartChef
     },
     rewardTokenAddress: {
       97: '0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee', // BUSD, didnt find CAKE
@@ -570,7 +570,7 @@ const pools: PoolConfig[] = [
     poolCategory: PoolCategory.CORE,
     projectLink: 'https://dragonballfinance.org/',
     harvest: true,
-    tokenPerBlock: '0.00003651736111',
+    tokenPerBlock: '0.00069444',
     sortOrder: 21,
     isFinished: false,
     tokenDecimals: 18,
