@@ -91,7 +91,7 @@ const fetchFarms3 = async () => {
         }
       }
 
-      const [info, totalAllocPoint, senzuPerBlock] = await multicall(masterchef3ABI, [
+      const [info, totalAllocPoint, DragonBallPerBlock] = await multicall(masterchef3ABI, [
         {
           address: getMasterChef3Address(),
           name: 'poolInfo',
@@ -103,7 +103,7 @@ const fetchFarms3 = async () => {
         },
         {
           address: getMasterChef3Address(),
-          name: 'senzuPerBlock',
+          name: 'DragonBallPerBlock',
         },
       ])
 
@@ -119,7 +119,8 @@ const fetchFarms3 = async () => {
         poolWeight: poolWeight.toNumber(),
         multiplier: `${allocPoint.div(100).toString()}X`,
         depositFeeBP: info.depositFeeBP,
-        senzuPerBlock: new BigNumber(senzuPerBlock).toNumber(),
+        
+        dragonballPerBlock: new BigNumber(DragonBallPerBlock).toNumber(),
       }
     }),
   )

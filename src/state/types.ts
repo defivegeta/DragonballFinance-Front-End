@@ -25,8 +25,8 @@ export interface Farm3 extends Farm3Config {
   tokenPriceVsQuote?: BigNumber
   poolWeight?: number
   depositFeeBP?: number
-  senzuPerBlock?: number
-  userData?: {
+  DragonBallPerBlock?: number
+    userData?: {
     allowance: BigNumber
     tokenBalance: BigNumber
     stakedBalance: BigNumber

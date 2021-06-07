@@ -131,6 +131,35 @@ export const usePriceCakeBusd = (): BigNumber => {
 //   return ethPrice
 // }
 
+export const usePriceSenzuBusd = () => {
+  const [price, setPrice] = useState(new BigNumber(0))
+
+  useEffect(() => {
+    const fetchPrice = async () => {
+      const lpAddress = '0xCb8e10cd31EBB2633425CD4f579221Ad126Da040'
+      const [wbnbTokenBalanceLP, eggTokenBalanceLP] = await multicall(erc20, [
+        {
+          address: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+          name: 'balanceOf',
+          params: [lpAddress],
+        },
+        {
+          address: '0xcba1813ede683333020cedea7c3b63fbac28e78e',
+          name: 'balanceOf',
+          params: [lpAddress],
+        },
+      ])
+
+      if (!eggTokenBalanceLP || !wbnbTokenBalanceLP) return
+
+      setPrice(new BigNumber(wbnbTokenBalanceLP).div(new BigNumber(eggTokenBalanceLP)))
+    }
+
+    fetchPrice()
+  }, [])
+
+  return price
+}
 
 export const usePriceEthBusd = () => {
   const [price, setPrice] = useState(new BigNumber(0))
@@ -242,12 +271,10 @@ export const usePriceBTCBBusd = () => {
 export const useTotalValue = (): BigNumber => {
   const farms = useFarms()
   const bnbPrice = usePriceBnbBusd()
-  const senzuPrice = usePrice3CakeBusd()
+  const senzuPrice = usePriceSenzuBusd()
   const cake2Price = usePriceCake2Busd()
   const ethPrice = usePriceEthBusd()
   const btcbPrice2 = usePriceBTCBBusd()
-
-  
 
   const usdtPrice: BigNumber = useMemo(() => {
     return new BigNumber(1)
@@ -320,7 +347,7 @@ export const usePrice3CakeBusd = (): BigNumber => {
   // const bnbPriceUSD = usePriceBnbBusd()
   // const farm = useFarmFromPid(pid)
   // return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
-  const pid = 1; // EGG-BUSD LP
+  const pid = 1 // SL1-BUSD LP
   const farm = useFarm3FromPid(pid);
   return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO;
 }
@@ -329,9 +356,17 @@ export const useTotalValue3 = (): BigNumber => {
   const farms = useFarms3();
   const bnbPrice = usePrice3BnbBusd();
   const cakePrice = usePrice3CakeBusd();
+  const senzuPrice = usePriceSenzuBusd();
+  const cake2Price = usePriceCake2Busd();
 
+  const usdtPrice: BigNumber = useMemo(() => {
+    return new BigNumber(1)
+  }, [])
 
-  let value = new BigNumber(0);
+  const totalValue3 = useRef(new BigNumber(0))
+
+  useEffect(() => {
+  let farmsTotalValue3 = new BigNumber(0);
   for (let i = 0; i < farms.length; i++) {
     const farm = farms[i]
     if (farm.lpTotalInQuoteToken) {
@@ -340,12 +375,24 @@ export const useTotalValue3 = (): BigNumber => {
         val = (bnbPrice.times(farm.lpTotalInQuoteToken));
       }else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
         val = (cakePrice.times(farm.lpTotalInQuoteToken));
+      } else if (farm.quoteTokenSymbol === QuoteToken.SENZU) {
+          val = senzuPrice.times(farm.lpTotalInQuoteToken);
+      } else if (farm.quoteTokenSymbol === QuoteToken.CAKE2) {
+          val = cake2Price.times(farm.lpTotalInQuoteToken);
+      } else if (farm.quoteTokenSymbol === QuoteToken.USDT) {
+          val = usdtPrice.times(farm.lpTotalInQuoteToken);
       }else{
         val = (farm.lpTotalInQuoteToken);
       }
-      value = value.plus(val);
-
+        farmsTotalValue3 = farmsTotalValue3.plus(val)
+      }
     }
+
+    totalValue3.current = farmsTotalValue3
+  }, [bnbPrice, senzuPrice, farms, cakePrice, cake2Price, usdtPrice])
+
+  if (!totalValue3) {
+    return new BigNumber(0)
   }
-  return value;
+  return totalValue3.current
 }
